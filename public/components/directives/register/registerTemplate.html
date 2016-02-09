@@ -1,0 +1,83 @@
+<div class="ui large modal" id="modaldiv">
+  <i class="close icon"></i>
+  <div class="header">
+    <img class="ui avatar image" src="css/img/justFishBlackLogo.png" alt=""/>
+    Welcome! Please register below
+  </div>
+  <div class="ui container">
+    <img class="ui small image" src="css/img/wireframe.png" alt=""/>
+    <div class="ui mini icon button">
+      <i class="icon camera"></i>
+      Choose photo
+    </div>
+  </div>
+
+  <form class="ui medium form">
+    <br><br><br>
+    <div class="two fields">
+      <div class="six wide required field">
+        <label>First Name</label>
+        <input type="text">
+      </div>
+      <div class="ten wide required field">
+        <label>Last Name</label>
+        <input type="text">
+      </div>
+    </div>
+    <br>
+    <div class="two fields">
+      <div class="ten wide required field">
+        <label>Email</label>
+        <input type="email">
+      </div>
+      <div class="six wide required field">
+        <label>Password</label>
+        <input type="password">
+      </div>
+    </div>
+    <br>
+    <div class="two fluid fields">
+      <div class="eight wide required field">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="1">Male</div>
+            <div class="item" data-value="0">Female</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="eight wide required field">
+        <label>Fishing styles</label>
+        <select class="ui multiple search dropdown" multiple="">
+          <option value="Fly">Fly fishing</option>
+          <option value="Spin">Spin Castin</option>
+          <option value="BaitCast">Bait Casting</option>
+          <option value="Trolling">Trolling</option>
+          <option value="Tenkara">Tenkara</option>
+          <option value="Bait">Bait Casting</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+    <div class="two fields">
+      <div class="eight wide required field">
+        <label>City</label>
+        <input type="text">
+      </div>
+      <div class="eight wide required field">
+        <label>Region</label>
+        <input type="text">
+      </div>
+    </div>
+  </form>
+  <br>
+  <div class="actions">
+    <div class="ui button">Cancel</div>
+    <div class="ui button">OK</div>
+  </div>
+</div>

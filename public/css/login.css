@@ -1,0 +1,39 @@
+.loginBackground {
+  position: absolute;
+  max-height: 110%;
+  width: auto;
+  z-index: 1;
+}
+.cortin {
+  position: absolute;
+  z-index: 2;
+  height: 110%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+
+}
+#mainLogin {
+      height: 100%;
+    }
+    #loginColumn {
+      position: relative;
+      /*top: 20vh;*/
+      max-width: 400px;
+      z-index: 5;
+    }
+    /*#logoImg {
+      position: absolute;
+      top: 5vh;
+      left: 5vw;
+      width: 15vw;
+      z-index: 5;
+    }*/
+    #loginTitle{
+      color: white;
+      text-shadow: black 0.3px 0.3px 0.3px;
+
+    }
+#modaldiv {
+  padding: 5vh 10vw;
+}
