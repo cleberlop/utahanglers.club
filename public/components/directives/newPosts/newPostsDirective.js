@@ -2,6 +2,7 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
   return {
     templateUrl: 'components/directives/newPosts/newPostsTemplate.html',
     controller: function($scope) {
+      
       $scope.ratingFunc = function() {
         $('.ui.rating')
           .rating();
@@ -61,6 +62,7 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
         postService.createPost($scope.newPost).then(function(user) {
           $('.form').form('clear');
           $('.ui.modal').modal('hide');
+
         });
       };
 

@@ -17,7 +17,7 @@ module.exports = {
   index: function(req, res) {
     var page =req.query.page;
     delete req.query.page;
-    Post.find(req.query).sort({dateOfPost: -1}).skip((page-1)*4).limit(4).exec(function(err, result) {
+    Post.find(req.query).sort({dateOfPost: -1}).skip((page-1)*10).limit(10).exec(function(err, result) {
       if(err) {
         res.status(500).send(err);
       //if it is successful, do this
