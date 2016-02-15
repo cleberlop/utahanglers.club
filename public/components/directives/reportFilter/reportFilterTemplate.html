@@ -1,22 +1,7 @@
 <div class="ui column">
-  <select class="ui multiple search dropdown" multiple="">
-  <option value="">Filter by Region</option>
-  <option value="Northern">
-    Northern</option>
-  <option value="Central">
-    Central</option>
-  <option value="Northeastern">
-    Northeastern</option>
-  <option value="Southeastern">
-    Southeastern</option>
-  <option value="Southern">
-    Southern</option>
-  </select>
-</div>
 
-
-<select class="ui multiple search dropdown" multiple="">
-  <option value="">Filter by place</option>
+<select class="ui huge multiple search dropdown" ng-model="filterInReport" ng-change="getFilterByPlace(filterInReport)" multiple="">
+  <option value="">Filter by Place</option>
   <option value="Bear Lake">
     Bear Lake</option>
   <option value=" Blacksmith Fork River">
@@ -59,3 +44,4 @@
     Willard Bay Reservoir</option>
 
 </select>
+</div>

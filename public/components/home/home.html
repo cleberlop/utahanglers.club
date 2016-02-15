@@ -1,115 +1,25 @@
-<div class="mainMenu">
-  <div class="ui inverted blue  stackable secondary menu mainMenu">
-    <img id="miniLogoImg"class="ui tiny image" src="css/img/JustFishLogo.svg" alt="" />
-
-    <a class="active  item" href="./#/home">
-      Home
-    </a>
-    <a class="item" href="./#/profile">
-      Profile
-    </a>
-    <a class="item" href="./#/reports">
-      Reports
-    </a>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui icon input">
-          <input type="text" placeholder="Search...">
-          <i class="search link icon"></i>
-        </div>
-      </div>
-      <a class="ui item">
-        Logout
-      </a>
-    </div>
-  </div>
-</div>
+<nav-bar-directive></nav-bar-directive>
 <div class="coverPhoto">
-  <img id="coverPic" src="css/img/cover.jpg" alt=""/>
-  <!-- <img id="profilePic"src="css/img/profilepic.jpg" alt="" /> -->
+  <img id="coverPic" ng-src='css/img/trout.jpg' alt=""/>
+
 </div>
-<div class="ui doubling stackable grid container">
+<div class="ui container">
   <div class="ui stackable grid">
-    <div class="four wide column">
-      <div class="ui link cards">
-        <div id="profileCard" class="ui fluid card">
-          <div class="image">
-            <img id="profilePic" src="css/img/Fishy.jpg">
-          </div>
-          <div class="content">
-            <div class="header">Cleber Albuquerque</div>
-            <div class="meta">
-              <a>Fly fishing</a>
-            </div>
-            <div class="description">
-              I'm a Fly fisherman
-            </div>
-          </div>
-          <div class="extra content">
-            <span class="right floated">
-              Joined in 2013
-            </span>
-            <span>
-              <i class="star icon"></i>
-              75 Following
-            </span>
-            <br>
-            <span>
-              <i class="user icon"></i>
-              75 Followers
-            </span>
-          </div>
-        </div>
+
+    <div class="twelve wide column" id="profileFeed">
+        <new-post-directive></new-post-directive>
+        <br><br>
+      <posted-directive posts="posts"></posted-directive>
+      <br>
+      <div class="actions">
+        <div class="ui blue button" ng-click="readMore()">ReadMore</div>
       </div>
-    </div>
-    <div class="eight wide column" id="profileFeed">
-      <new-post-directive></new-post-directive>
-      <br><br>
-      <posted-directive></posted-directive>
     </div>
     <div id="profileFollowing" class="four wide column">
-      <div class="ui fluid card">
-        <div class="content">
-          Fish of the Day
-        </div>
-        <div class="content">
-          <div class="right floated meta">14h</div>
-          <img class="ui avatar image" src="css/img/avatar.png">
-          Cleber
-        </div>
-        <div class="image">
-          <img class="ui mini image" src="css/img/avatar.png">
-        </div>
-      </div>
-      <div class="ui fluid card">
-        <div class="content">
-          <p>
-            Following
-          </p>
-        </div>
-          <div class="content">
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
-              <a href=""><img src="/css/img/Fishy.jpg"  data-title="Cleber Albuquerque" data-content="Fly fishing" class="ui mini image popUpper"></a>
 
-
-
-            </div>
-          </div>
-
+    <fish-of-the-day-directive></fish-of-the-day-directive>
+    <br>
+    <following-directive></following-directive>
 
       </div>
 

@@ -1,50 +1,37 @@
-<div class="mainMenu">
-  <div class="ui inverted blue  stackable secondary menu mainMenu">
-    <img id="miniLogoImg" class="ui tiny image" src="css/img/JustFishLogo.svg" alt=""/>
-
-    <a class="item" href="./#/home">
-      Home
-    </a>
-    <a class="item" href="./#/profile">
-      Profile
-    </a>
-    <a class="active item" href="./#/reports">
-      Reports
-    </a>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui icon input">
-          <input type="text" placeholder="Search...">
-          <i class="search link icon"></i>
-        </div>
-      </div>
-      <a class="ui item">
-        Logout
-      </a>
-    </div>
-  </div>
-</div>
+<nav-bar-directive></nav-bar-directive>
 <div class="coverPhoto">
-  <img id="coverPic" src="css/img/cover.jpg" alt=""/>
-  <!-- <img id="profilePic"src="css/img/profilepic.jpg" alt="" /> -->
+  <img id="coverPic" src="css/img/FishingReports.png" alt=""/>
 </div>
+
+<div class="ui fluid container">
 <div class="four wide column">
 
-  <div id="reportPlaces" class="eight wide required field">
-    <report-filter-directive></report-filter-directive>
-  </div>
-
 </div>
-<div class="ui doubling stackable grid container">
   <div class="ui centered stackable grid">
-    <div class="twelve wide column" id="profileFeed">
+    <div class="ten wide column" id="profileFeed">
+      <div id="reportPlaces" class="six wide required field" ng-click="applyFilters()">
+        <report-filter-directive filter-in-report="filterInReport" get-filter-by-place="filterByPlace({filterInReport:[filterInReport]})"></report-filter-directive>
+      </div>
+      <br>
       <new-post-directive></new-post-directive>
       <br><br>
-      <posted-directive></posted-directive>
+      <posted-directive posts="posts"></posted-directive>
 
     </div>
+    <div class="four wide column" id="placeOfTheDay">
+    <div class="ui fluid card">
+      <div class="content">
+        Place of the Day
+      </div>
+      <div class="content">
+        Provo River
+      </div>
+      <div class="image">
+        <img class="ui mini image" ng-src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Upper_Provo_River_Utah.jpg">
+      </div>
+    </div>
+        </div>
+
 
   </div>
-
-</div>
 </div>

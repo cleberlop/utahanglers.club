@@ -1,0 +1,23 @@
+<div class="ui center aligned segment">
+  <div class="ui center aligned fluid card">
+  <div class="content">
+    <p id="followingTitle">
+      Following
+    </p>
+  </div>
+  <!-- <div class="ui center aligned grid"> -->
+    <!-- <div id="unicId"class="ui center cards"> -->
+      <div class="content">
+        <div class="ui row">
+          <a ng-repeat="person in followingResult" ui-sref="Profile({id:person._id})">
+            <img id="followingPics" ng-src={{person.profilePic}} class="ui rounded tiny image" >
+          </a>
+        </div>
+
+    </div>
+  </div>
+
+  </div>
+<!-- </div> -->
+
+<!-- </div> -->

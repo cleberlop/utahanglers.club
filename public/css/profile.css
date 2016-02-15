@@ -57,11 +57,31 @@ body {
   font-family: Oswald;
 }
 .popUpper {
-  margin: 3px 3px;
+  margin: 2px 1.5px;
   border: 0.2px solid lightgray;
-  border-radius: 3px;
 }
 
-.mainMenu {
+/*.mainMenu {
   max-height: 7vh;
+}*/
+#followingTitle {
+  float: left;
+}
+#ratingNewPostTemplate {
+  position: relative;
+  top: 11px;
+}
+#postedAvatarImage {
+  object-fit: cover;
+}
+#fishOfTheDayAvatarImage {
+  object-fit: cover;
+
+}
+#followingPics {
+  position: relative;
+  height: 7vw;
+  width: 4vw;
+  object-fit: cover;
+  border: 0.01px solid rgba(199, 199, 199, 0.72);
 }

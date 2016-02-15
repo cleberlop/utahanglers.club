@@ -1,7 +1,8 @@
 <video class="loginBackground" src="css/img/Relaxation.mp4" autoplay="autoplay" loop="loop" muted="true"></video>
 <div class="cortin"></div>
-
+<br>
 <div id="mainLogin" class="ui middle aligned center aligned grid">
+
   <div class="column" id="loginColumn">
     <h2 id="loginTitle" class="ui image header">
       <!-- <img src="css/img/loginIcon.png" class="image"> -->
@@ -11,21 +12,21 @@
         <h6>Log-in to your account</h6>
       </div>
     </h2>
-    <form class="ui large form">
+    <div id="loginForm" class="ui large form" ng-keypress="pressEnter($event, user)">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="email" placeholder="E-mail address">
+            <input type="text" name="email" ng-model="user.email"placeholder="E-mail address">
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password"  ng-model="user.password" placeholder="Password">
           </div>
         </div>
-        <div class="ui fluid large blue submit button">Login</div>
+        <div id="loginButton"class="ui fluid large blue button" ng-click="login(user)">Login</div>
         <br>
         or sign in with
         <br><br>
@@ -37,7 +38,7 @@
 
       <div class="ui error message"></div>
 
-    </form>
+    </div>
 
     <div class="ui message">
       Don't have an account?

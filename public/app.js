@@ -1,4 +1,4 @@
-var app = angular.module('utahClub', ['ui.router']);
+var app = angular.module('utahClub', ['ui.router', 'angularMoment']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -11,22 +11,47 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state('Home', {
       templateUrl: 'components/home/home.html',
       controller: 'homeCtrl',
-      url: '/home'
+      url: '/home',
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getMe().then(function(result){
+            if(result._id){
+              return result;
+            }else{
+              $state.go("Login");
+            }
+          });
+
+        }
+      }
     })
     .state('Profile', {
       templateUrl: 'components/profile/profile.html',
       controller: 'profileCtrl',
-      url: '/profile'
+      url: '/profile/:id',
+      resolve: {
+        user: function(userService, $state, $stateParams) {
+          return userService.findUser($stateParams.id);
+
+        }
+      }
     })
     .state('Report', {
       templateUrl: 'components/report/report.html',
       controller: 'reportCtrl',
-      url: '/reports'
-    })
-    .state('Admin', {
-      templateUrl: 'components/admin/admin.html',
-      controller: 'reportCtrl',
-      url: '/admin'
+      url: '/reports',
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getMe().then(function(result){
+            if(result._id){
+              return result;
+            }else{
+              $state.go("Login");
+            }
+          });
+
+        }
+      }
     });
 
     $urlRouterProvider.otherwise('/login');

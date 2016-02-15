@@ -1,0 +1,26 @@
+<div class="mainMenu">
+  <div class="ui inverted blue  stackable secondary menu mainMenu">
+    <a class="item" ui-sref="Home">
+      <img id="miniLogoImg" class="ui mini image" src="css/img/JustFishLogo.svg" alt=""/>
+      &nbsp&nbsp
+      Home
+    </a>
+    <a class="item" ui-sref="Profile({id:currentUser._id})">
+      Profile
+    </a>
+    <a class="item" ui-sref="Report">
+      Reports
+    </a>
+    <div class="right menu">
+      <!-- <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div> -->
+      <a class="ui item" ng-click="logOut();">
+        Logout
+      </a>
+    </div>
+  </div>
+</div>

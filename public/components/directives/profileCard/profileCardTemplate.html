@@ -1,0 +1,32 @@
+<div class="ui link cards">
+  <div id="profileCard" class="ui fluid card">
+    <div class="image">
+      <img id="profilePic" ng-src={{currentUser.profilePic}}>
+    </div>
+    <div class="content">
+      <div class="header">{{currentUser.firstName + " " + currentUser.lastName}}</div>
+      <div class="description">
+        {{currentUser.fishingStyle.join(', ');}}
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        <button class="ui mini blue active button" ng-click="follow()">
+          <i class="user icon" ></i>
+          Follow
+        </button>
+      </span>
+      <span>
+        <i class="star icon"></i>
+        {{currentUser.following.length}}
+        Following
+      </span>
+      <br>
+      <span>
+        <i class="user icon"></i>
+        {{currentUser.followers.length}}
+        Followers
+      </span>
+    </div>
+  </div>
+</div>
