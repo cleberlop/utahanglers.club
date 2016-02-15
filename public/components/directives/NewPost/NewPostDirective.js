@@ -1,6 +1,6 @@
 angular.module('utahClub').directive('newPostDirective', function(userService, postService) {
   return {
-    templateUrl: 'components/directives/newPost/newPostTemplate.html',
+    templateUrl: 'components/directives/NewPost/newPostTemplate.html',
     controller: function($scope) {
       $scope.ratingFunc = function() {
         $('.ui.rating')
