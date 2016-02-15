@@ -65,11 +65,6 @@ angular.module('utahClub').directive('newPostDirective', function(userService, p
       };
 
 
-
-
-
-
-
       $scope.ratingFunc();
       $scope.ratingPop();
       $scope.reportDropDown();
