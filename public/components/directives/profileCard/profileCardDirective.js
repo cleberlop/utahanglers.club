@@ -13,6 +13,9 @@ angular.module('utahClub').directive('profileCardDirective', function(userServic
 
       $scope.follow = function(){
         userService.follow($scope.currentUser, $scope.personLoggedIn).then(function(result){
+          if ($scope.currentUser.followers.indexOf('thisShowsThatIWasFollowedOnce') === -1 && $scope.currentUser.followers.indexOf($scope.personLoggedIn._id) === -1  ) {
+            $scope.currentUser.followers.push('thisShowsThatIWasFollowedOnce');
+          }
         });
       };
 

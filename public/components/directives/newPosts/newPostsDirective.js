@@ -2,7 +2,7 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
   return {
     templateUrl: 'components/directives/newPosts/newPostsTemplate.html',
     controller: function($scope) {
-      
+
       $scope.ratingFunc = function() {
         $('.ui.rating')
           .rating();
@@ -23,7 +23,7 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
       $scope.postModal = function() {
         $(document).ready(function() {
           $('#newPostButton').click(function() {
-            $('.fullscreen.modal, #newPostId').modal('show');
+            $('.fullscreen, #newPostId').modal('show');
           });
         });
       };
@@ -59,11 +59,12 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
 
 
       $scope.createNewPost = function() {
-        postService.createPost($scope.newPost).then(function(user) {
+        postService.createPost($scope.newPost).then(function(post) {
           $('.form').form('clear');
           $('.ui.modal').modal('hide');
-
+          $scope.posts.unshift(post);
         });
+
       };
 
 
