@@ -4,7 +4,7 @@ var q = require('q');
 
 
 var userSchema = mongoose.Schema({
-  email: {type: String, required: true, minlength: 7, maxlength: 25},
+  email: {type: String, required: true, minlength: 4, maxlength: 100},
   password: {type: String},
   firstName: {type: String, required: true},
   lastName: {type: String, required: true},
