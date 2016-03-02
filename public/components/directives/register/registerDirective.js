@@ -90,7 +90,7 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
         firstName: $scope.firstName,
         lastName: $scope.lastName,
         email: $scope.email,
-        password: $scope.password, //add security later before lauch
+        password: $scope.password,
         gender: $scope.gender,
         fishingStyles: $scope.fishingStyle,
         city: $scope.city,
@@ -108,11 +108,6 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
 
       };
 
-
-
-      // $scope.alert = function(){
-      //   console.log($scope.newUser);
-      // };
       $scope.checkRequired();
       $scope.registerDropDownGender();
       $scope.registerDropDownFishing();

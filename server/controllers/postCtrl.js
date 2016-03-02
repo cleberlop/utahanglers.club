@@ -20,7 +20,6 @@ module.exports = {
     Post.find(req.query).sort({dateOfPost: -1}).skip((page-1)*10).limit(10).exec(function(err, result) {
       if(err) {
         res.status(500).send(err);
-      //if it is successful, do this
       } else {
         res.send(result);
       }

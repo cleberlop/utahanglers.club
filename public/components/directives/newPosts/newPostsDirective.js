@@ -23,7 +23,7 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
       $scope.postModal = function() {
         $(document).ready(function() {
           $('#newPostButton').click(function() {
-            $('.fullscreen, #newPostId').modal('show');
+            $('#newPostId').modal('show');
           });
         });
       };

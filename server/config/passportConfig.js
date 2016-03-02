@@ -3,6 +3,8 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var User = require('./../models/User');
 
 // Add facebook Auth later
+
+
 // var fbStrat = new FacebookStrategy({
 //   clientID: process.env.facebookClientId,
 //   clientSecret: process.env.facebookClientSecret,

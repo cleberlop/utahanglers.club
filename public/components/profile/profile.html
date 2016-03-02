@@ -1,7 +1,9 @@
 <nav-bar-directive></nav-bar-directive>
 <div class="coverPhoto">
-  <img id="coverPic" ng-src={{user.coverPic}} alt=""/>
-  <!-- <img id="profilePic"src="css/img/profilepic.jpg" alt="" /> -->
+  <img id="coverPic" class='ui image' ng-src={{user.coverPic}} alt=""/>
+  <div id="changeCoverPic">
+      <a id="changeCoverPicIcon" href=""><i class="photo large inverted icon"></i></a>
+  </div>
 </div>
 <div class="ui container">
   <div class="ui stackable grid">

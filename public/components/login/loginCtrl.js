@@ -16,7 +16,6 @@ $scope.checkerEmail = function() {
   loginService.checkEmail();
 };
 
-
 $scope.signerUpModal();
 $scope.checkerEmail();
 

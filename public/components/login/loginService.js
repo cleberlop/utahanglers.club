@@ -47,7 +47,4 @@ this.signUpModal = function() {
   });
   };
 
-
-
-
 });

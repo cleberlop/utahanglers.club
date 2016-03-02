@@ -37,7 +37,6 @@ module.exports = {
     User.findById(req.params.id, function(err, result) {
       if(err) {
         res.status(500).send(err);
-      //if it is successful, do this
       } else {
         res.send(result);
       }
