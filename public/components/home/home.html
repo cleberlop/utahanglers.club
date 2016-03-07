@@ -3,10 +3,10 @@
   <img id="coverPic" ng-src='css/img/trout.jpg' alt=""/>
 
 </div>
-<div class="ui container">
+<div class="computer only ui container">
   <div class="ui stackable grid">
 
-    <div class="twelve wide column" id="profileFeed">
+    <div class="sixteen wide mobile twelve wide computer column" id="profileFeed">
         <new-posts-directive></new-posts-directive>
         <br><br>
       <posted-directive posts="posts"></posted-directive>
@@ -15,7 +15,7 @@
         <div class="ui blue button" ng-click="readMore()">ReadMore</div>
       </div>
     </div>
-    <div id="profileFollowing" class="four wide column">
+    <div id="profileFollowing" class="sixteen wide mobile four wide computer column">
 
     <fish-of-the-day-directive></fish-of-the-day-directive>
     <br>

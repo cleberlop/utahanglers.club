@@ -5,20 +5,19 @@
       <a id="changeCoverPicIcon" href=""><i class="photo large inverted icon"></i></a>
   </div>
 </div>
-<div class="ui container">
-  <div class="ui stackable grid">
-    <div class="four wide column">
-      <profile-card-directive current-user="user"></profile-card-directive>
+<div id="pageBody">
+  <div class="ui stackable centered grid">
+    <div class="sixteen wide mobile four wide computer column">
+      <profile-card-directive id="firstProfileColumn"current-user="user"></profile-card-directive>
     </div>
-    <div class="eight wide column" id="profileFeed">
+    <div class="sixteen wide mobile eight wide computer column" id="profileFeed">
       <br>
       <posted-directive posts="posts"></posted-directive>
     </div>
-    <div id="profileFollowing" class="four wide column">
+    <div id="profileFollowing" class="sixteen wide mobile four wide computer column">
       <br>
       <following-directive></following-directive>
     </div>
   </div>
 
-</div>
 </div>
