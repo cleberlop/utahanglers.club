@@ -7,7 +7,6 @@ angular.module('utahClub').service('postService', function($http, $state) {
         return result.data;
       });
   };
-
   this.getPosts = function(page) {
     return $http.get('/api/posts?page=' + page).then(function(result) {
       return result.data;
@@ -18,13 +17,11 @@ angular.module('utahClub').service('postService', function($http, $state) {
       return result.data;
     });
   };
-
   this.getByWaterbody = function(page, waterbody) {
     return $http.get('/api/posts?page=' + page + '&waterbody=' + waterbody + '&typeOfPost=report').then(function(result) {
       return result.data;
     });
   };
-
   this.addLike = function(postId, userId) {
     return $http.put('/api/posts/' + postId, {
         $addToSet: {
@@ -35,6 +32,4 @@ angular.module('utahClub').service('postService', function($http, $state) {
         return result.data;
       });
   };
-
-
 });

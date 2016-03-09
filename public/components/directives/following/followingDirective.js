@@ -13,7 +13,6 @@ angular.module('utahClub').directive('followingDirective', function(userService)
                 $scope.followingResult.push(response);
               });
             });
-
           });
         } else if ($state.current.name === 'Home') {
           userService.getMe().then(function(result) {
@@ -27,9 +26,7 @@ angular.module('utahClub').directive('followingDirective', function(userService)
           });
         }
       };
-
       $scope.getTheFollowing();
-
     }
   };
 });

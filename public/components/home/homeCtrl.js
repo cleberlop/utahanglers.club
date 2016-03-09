@@ -5,14 +5,11 @@ angular.module('utahClub').controller('homeCtrl', function($scope, userService, 
       $state.go('Login');
     });
   };
-
   $scope.posts = [];
   var page = 1;
-
   postService.getPosts(1).then(function(response) {
     $scope.posts = response;
   });
-
   $scope.readMore = function() {
     page++;
     postService.getPosts(page).then(function(response) {
@@ -21,10 +18,6 @@ angular.module('utahClub').controller('homeCtrl', function($scope, userService, 
       });
     });
   };
-
   userService.getMe().then(function(response){
   });
-
-
-
 });

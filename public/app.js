@@ -1,8 +1,8 @@
 var app = angular.module('utahClub', ['ui.router', 'angularMoment']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
-    $stateProvider
+  $stateProvider
     .state('Login', {
       templateUrl: 'components/login/login.html',
       controller: 'loginCtrl',
@@ -14,14 +14,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: '/home',
       resolve: {
         user: function(userService, $state) {
-          return userService.getMe().then(function(result){
-            if(result._id){
+          return userService.getMe().then(function(result) {
+            if (result._id) {
               return result;
-            }else{
+            } else {
               $state.go("Login");
             }
           });
-
         }
       }
     })
@@ -42,10 +41,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: '/reports',
       resolve: {
         user: function(userService, $state) {
-          return userService.getMe().then(function(result){
-            if(result._id){
+          return userService.getMe().then(function(result) {
+            if (result._id) {
               return result;
-            }else{
+            } else {
               $state.go("Login");
             }
           });
@@ -54,6 +53,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       }
     });
 
-    $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/login');
 
 });

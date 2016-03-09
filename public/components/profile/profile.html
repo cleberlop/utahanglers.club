@@ -2,13 +2,15 @@
 <div class="coverPhoto">
   <img id="coverPic" class='ui image' ng-src={{user.coverPic}} alt=""/>
   <div id="changeCoverPic">
-      <a id="changeCoverPicIcon" href=""><i class="photo large inverted icon"></i></a>
+    <a id="changeCoverPicIcon" href="">
+      <i class="photo large inverted icon"></i>
+    </a>
   </div>
 </div>
 <div id="pageBody">
   <div class="ui stackable centered grid">
     <div class="sixteen wide mobile four wide computer column">
-      <profile-card-directive id="firstProfileColumn"current-user="user"></profile-card-directive>
+      <profile-card-directive id="firstProfileColumn" current-user="user"></profile-card-directive>
     </div>
     <div class="sixteen wide mobile eight wide computer column" id="profileFeed">
       <br>
@@ -19,5 +21,4 @@
       <following-directive></following-directive>
     </div>
   </div>
-
 </div>

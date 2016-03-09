@@ -1,8 +1,6 @@
 var mongoose = require("mongoose");
 
-
 var postSchema = mongoose.Schema({
-  //enter properties here
   userId: {type: String, required: true},
   profilePic: {type: String, required: false, default: 'https://beardownchallenge.com/assets/no-user-image-square-9f6a473a32ad639f619216331d10d61ce1b35c9271d5683920960e1a5ee45bb8.jpg'},
   firstName: {type: String, required: false},
@@ -16,6 +14,5 @@ var postSchema = mongoose.Schema({
   rating: {type: String},
   dateOfPost: {type: Date, default: Date.now}
 });
-
 
 module.exports = mongoose.model("Post", postSchema);

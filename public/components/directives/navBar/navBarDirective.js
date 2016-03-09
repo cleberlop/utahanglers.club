@@ -8,10 +8,8 @@ angular.module('utahClub').directive('navBarDirective', function(userService, po
           $state.go('Login');
         });
       };
-
       $scope.currentUser = {};
-
-      $scope.getCurrentUser = function(){
+      $scope.getCurrentUser = function() {
         userService.getMe().then(function(user) {
           $scope.currentUser = user;
         });

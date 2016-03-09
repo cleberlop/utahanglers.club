@@ -4,16 +4,7 @@
     <img class="ui avatar image" src="css/img/justFishBlackLogo.png" alt=""/>
     Welcome! Please register below
   </div>
-  <!-- <div class="ui container">
-    <img class="ui small image" src={{newUser.profilePic}}/>
-    <div id="addPhotoButtonRegister" class="ui mini icon button">
-      <i class="icon camera"></i>
-      Choose photo
-    </div>
-    <input type="file" id="registerAddPhoto" name="addPhotoRegister" style="display:none" accept="image/*"/>
-  </div> -->
-
-  <form id="registerForm"class="ui medium form">
+  <form id="registerForm" class="ui medium form">
     <br><br><br>
     <div class="two fields">
       <div class="six wide required field">
@@ -86,18 +77,15 @@
   <br><br><br>
   <form class="ui medium form">
     <div class="two fields">
-  <input type="text" name="profilePic" placeholder="Add Profile photo url" ng-model="newUser.profilePic">
-  <input type="text" name="coverPic" placeholder="Add Cover photo url" ng-model="newUser.coverPic">
-</div>
-</form>
+      <input type="text" name="profilePic" placeholder="Add Profile photo url" ng-model="newUser.profilePic">
+      <input type="text" name="coverPic" placeholder="Add Cover photo url" ng-model="newUser.coverPic">
+    </div>
+  </form>
   <div class="actions">
     <div id="registerCancelButton" class="ui negative button" ng-click="clear();">Cancel</div>
     <div id="registerSubmitButton" name="submitButton" class="ui close blue button" ng-click="submitIt()">OK</div>
-
-    <!-- <div id="registerSubmitButton" name="submitButton" class="ui close blue button" ng-click="createNewUser()">OK</div> -->
   </div>
 </div>
-
 <div class="ui small modal" id="registerAlertModal">
   <div class="header">
     <h2>Thanks for registering!</h2>
@@ -107,14 +95,14 @@
 
   </div>
   <div class="actions">
-   <div class="ui negative button">OK</div>
- </div>
+    <div class="ui negative button">OK</div>
+  </div>
 </div>
 <div class="ui small modal" id="registerRequiredAlert">
   <div class="header">
     <h2>Please fill all required fields!</h2>
   </div>
   <div class="actions">
-   <div class="ui negative button">OK</div>
- </div>
+    <div class="ui negative button">OK</div>
+  </div>
 </div>

@@ -1,26 +1,28 @@
 <div class="ui fluid card" ng-repeat="post in posts track by $index">
-<div class="content">
-<div class="right floated meta">
+  <div class="content">
+    <div class="right floated meta">
       <time am-time-ago="post.dateOfPost" title="{{ post.dateOfPost | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time>
-  </div>
-    <img id="postedAvatarImage"class="ui avatar image" ng-src={{post.profilePic}}>
-  <a ui-sref="Profile({id:post.userId})">{{post.firstName + " " + post.lastName}}</a>
+    </div>
+    <img id="postedAvatarImage" class="ui avatar image" ng-src={{post.profilePic}}>
+    <a ui-sref="Profile({id:post.userId})">{{post.firstName + " " + post.lastName}}</a>
   </div>
   <div class="image">
     <img class="ui mini image" ng-src={{post.postPic}}>
   </div>
-    <div class="content">
-      {{post.postMessage}}
-    </div>
+  <div class="content">
+    {{post.postMessage}}
+  </div>
   <div class="content">
     <span class="right floated">
       <i class="thumbs outline up like big icon" ng-click='addLike(post._id, $index)'></i>
-      {{post.likes.length}} likes
+      {{post.likes.length}}
+      likes
     </span>
 
-      <i class="star yellow big icon superStazona"></i>
-      {{post.rating}} stars
-      <!-- COMENTS NUMBER WILL GO HERE!!!!!!!!!!!! -->
+    <i class="star yellow big icon superStazona"></i>
+    {{post.rating}}
+    stars
+    <!-- COMENTS NUMBER WILL GO HERE!!!!!!!!!!!! -->
     <!-- <i class="comment icon"></i>
     {{post.comments.length}} comments -->
     <br>

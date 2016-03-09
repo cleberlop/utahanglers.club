@@ -9,7 +9,6 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
             $('.form').form('clear');
           });
       };
-
       $scope.checkRequired = function() {
         $(document)
           .ready(function() {
@@ -27,11 +26,8 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
                   region: 'empty'
                 }
               });
-
           });
       };
-
-
       $scope.submitIt = function() {
         var validade = $("#registerForm").form('is valid');
         if (validade === true) {
@@ -82,8 +78,6 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
           $("#registerAddPhoto").trigger('click');
         });
       };
-
-
       $scope.newUser = {
         coverPic: $scope.coverPic,
         profilePic: $scope.profilePic,
@@ -96,24 +90,18 @@ angular.module('utahClub').directive('registerDirective', function(userService) 
         city: $scope.city,
         region: $scope.region,
       };
-
-
       $scope.createNewUser = function() {
         userService.createUser($scope.newUser).then(function(user) {
           $('.form').form('clear');
           $('.ui.modal').modal('hide');
           $('#registerAlertModal').modal('show');
         });
-
-
       };
-
       $scope.checkRequired();
       $scope.registerDropDownGender();
       $scope.registerDropDownFishing();
       $scope.registerDropDownRegion();
       $scope.addPhotoRegister();
-
     }
   };
 });

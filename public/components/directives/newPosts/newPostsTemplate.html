@@ -1,5 +1,6 @@
 <div id="newPostButton" class="ui primary icon button">
-  <i class="icon edit"></i> New Post
+  <i class="icon edit"></i>
+  New Post
 </div>
 <div class="ui large modal" id="newPostId">
   <i class="close icon"></i>
@@ -7,29 +8,29 @@
     <img class="ui avatar image" src="css/img/justFishBlackLogo.png" alt=""/>
     New Post
     <br><br>
-    <div class="ui form" >
-<div class="grouped fields">
-<label>What kind of Post is this?</label>
-<div class="field">
-  <div class="ui radio checkbox">
-    <input type="radio" name="frequency" checked="checked" ng-model="newPost.typeOfPost" value="report">
-    <label>Fishing Report</label>
-  </div>
-</div>
-<div class="field">
-  <div class="ui radio checkbox">
-    <input type="radio" name="frequency" ng-model="newPost.typeOfPost" value="bragging">
-    <label>Bragging Post</label>
-  </div>
-</div>
-<div class="field">
-  <div class="ui radio checkbox">
-    <input type="radio" name="frequency" ng-model="newPost.typeOfPost" value="funny">
-    <label>Funny</label>
-  </div>
-</div>
-</div>
-</div>
+    <div class="ui form">
+      <div class="grouped fields">
+        <label>What kind of Post is this?</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" checked="checked" ng-model="newPost.typeOfPost" value="report">
+            <label>Fishing Report</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" ng-model="newPost.typeOfPost" value="bragging">
+            <label>Bragging Post</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" ng-model="newPost.typeOfPost" value="funny">
+            <label>Funny</label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <select class="ui fluid multiple search medium dropdown" ng-model="newPost.waterbody" multiple="">
     <option value="">Where did you fish?</option>
@@ -73,34 +74,26 @@
       Weber River</option>
     <option value="Willard Bay Reservoir">
       Willard Bay Reservoir</option>
-
   </select>
-<form class="ui large icon reply form">
-<div class="field">
-<textarea placeholder="Post" ng-model="newPost.postMessage"></textarea>
-<div class=" content">
-<div class="item"> 
-  <!-- <input type="file" id="fileAddPhoto"  name="addPhotoFile" style="display:none" accept="image/*" />
-  <a id="newPostaddPhotoBtn"type="file" class="ui large label">
-    Add Photo
-  </a> -->
-  <div class="two fields">
-    <div class="three wide field">
-      <div id="ratingNewPostTemplate" class="ui huge star rating rateThePlace" data-rating="0" data-max-rating="5" data-content="Please rate the place" ng-click="getRating();" ng-model="newPost.rating" value="data-rating" >
-      </div> 
-    </div>
-    <div class="thirteen wide field">
-      <input classtype="text" name="postPic" placeholder="Add photo url" ng-model="newPost.postPic">
-
+  <form class="ui large icon reply form">
+    <div class="field">
+      <textarea placeholder="Post" ng-model="newPost.postMessage"></textarea>
+      <div class=" content">
+        <div class="item">
+          <div class="two fields">
+            <div class="three wide field">
+              <div id="ratingNewPostTemplate" class="ui huge star rating rateThePlace" data-rating="0" data-max-rating="5" data-content="Please rate the place" ng-click="getRating();" ng-model="newPost.rating" value="data-rating"></div>
+            </div>
+            <div class="thirteen wide field">
+              <input classtype="text" name="postPic" placeholder="Add photo url" ng-model="newPost.postPic">
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
-  </div> 
-</form>
-    </div>
-
-</div>
-<div class="actions">
-  <div class="ui negative button">Cancel</div>
-  <div class="ui blue button" ng-click="createNewPost()">OK</div>
-</div>
+  <div class="actions">
+    <div class="ui negative button">Cancel</div>
+    <div class="ui blue button" ng-click="createNewPost()">OK</div>
+  </div>
 </div>

@@ -13,7 +13,6 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
             position: 'top center',
           });
       };
-
       $scope.reportDropDown = function() {
         $('.ui.dropdown')
           .dropdown({
@@ -44,16 +43,16 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
         waterbody: $scope.waterbody
       };
 
-      userService.getMe().then(function(response){
-      $scope.newPost.userId = response._id;
-      $scope.newPost.profilePic = response.profilePic;
-      $scope.newPost.firstName = response.firstName;
-      $scope.newPost.lastName = response.lastName;
+      userService.getMe().then(function(response) {
+        $scope.newPost.userId = response._id;
+        $scope.newPost.profilePic = response.profilePic;
+        $scope.newPost.firstName = response.firstName;
+        $scope.newPost.lastName = response.lastName;
       });
 
-      $scope.getRating = function(){
+      $scope.getRating = function() {
         var res = $('.ui.rating')
-        .rating('get rating');
+          .rating('get rating');
         $scope.newPost.rating = res;
       };
 
@@ -66,15 +65,11 @@ angular.module('utahClub').directive('newPostsDirective', function(userService, 
         });
 
       };
-
-
       $scope.ratingFunc();
       $scope.ratingPop();
       $scope.reportDropDown();
       $scope.postModal();
       $scope.addPhoto();
-
-
     }
   };
 });

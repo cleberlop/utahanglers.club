@@ -13,11 +13,11 @@
   padding-left: 100px;
 }
 #coverPic {
-position: absolute;
-width:100%;
-height: 100%;
-object-fit:cover;
-z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 #profileCard {
   position: relative;
@@ -28,32 +28,28 @@ z-index: 1;
   position: relative;
   border: 5px solid white;
   border-radius: 7px;
-  width:100%;
+  width: 100%;
   max-height: 45vh;
   object-fit: cover;
-
 }
 #profileFeed {
-position: relative;
-top: 5vh;
-font-family: Oswald;
-font-size: 12px;
-}
-
-#profileFollowing{
   position: relative;
   top: 5vh;
-
+  font-family: Oswald;
+  font-size: 12px;
+}
+#profileFollowing {
+  position: relative;
+  top: 5vh;
 }
 body {
-  background: rgba(33,133,208,0.1);
+  background: rgba(33, 133, 208, 0.1);
   font-family: Oswald;
 }
 .popUpper {
   margin: 2px 1.5px;
   border: 0.2px solid lightgray;
 }
-
 #followingTitle {
   float: left;
 }
@@ -66,7 +62,6 @@ body {
 }
 #fishOfTheDayAvatarImage {
   object-fit: cover;
-
 }
 #followingPics {
   position: relative;
@@ -75,8 +70,9 @@ body {
   object-fit: cover;
   border: 0.01px solid rgba(199, 199, 199, 0.72);
 }
-#changeCoverPic{
-  position:absolute;;
+#changeCoverPic {
+  position: absolute;
+  ;
   display: flex;
   justify-content: flex-end;
   height: 100%;
@@ -84,17 +80,18 @@ body {
   z-index: 10;
   opacity: .5;
 }
-#changeCoverPicIcon{
+#changeCoverPicIcon {
   position: relative;
   bottom: 1vh;
   display: flex;
   align-self: flex-end;
 }
-#changeCoverPicIcon i{
+#changeCoverPicIcon i {
   text-shadow: black 1px 1px 1px;
 }
-#changeProfilePic{
-  position:absolute;;
+#changeProfilePic {
+  position: absolute;
+  ;
   display: flex;
   justify-content: flex-end;
   height: 100%;
@@ -104,36 +101,38 @@ body {
   bottom: 1vh;
   right: 0.4vw;
 }
-#changeProfilePicIcon{
+#changeProfilePicIcon {
   position: relative;
   display: flex;
   align-self: flex-end;
 }
-#changeProfilePicIcon i{
+#changeProfilePicIcon i {
   text-shadow: black 1px 1px 1px;
 }
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2){
-    .coverPhoto {
-      display: none;
-    }
-
-    #profileCard {
-      top: 1vh;
-    }
-
-    #profileFeed {
-    top: -10px;
-    }
-    #profileFollowing {
-      top: -2vh;
-    }
-
-    #pageBody {
-      padding-right: 3px;
-      padding-left: 3px;
-    }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .coverPhoto {
+    display: none;
   }
+  #profileCard {
+    top: 1vh;
+  }
+  #profileFeed {
+    top: -10px;
+  }
+  #profileFollowing {
+    top: -2vh;
+  }
+  #pageBody {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+#reportPlaces {
+  position: relative;
+  float: right;
+  top: 1vh;
+}
+#placeOfTheDay {
+  position: relative;
+  top: 6vh;
+}

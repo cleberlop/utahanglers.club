@@ -55,8 +55,6 @@ app.post('/api/posts', postCtrl.create);
 app.put('/api/posts/:id', postCtrl.update);
 app.delete('/api/posts/:id', postCtrl.remove);
 
-
-
 var port = 3000;
 app.listen(port, function() {
   console.log('listening on port ' + port);
